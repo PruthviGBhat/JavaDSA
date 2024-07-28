@@ -11,7 +11,7 @@ class Node {
 class LinkedList {
     Node head;
 
-    void merge(Node list1, Node list2) {
+    public void merge(Node list1, Node list2) {
         Node head = null;
         Node ptr = null;
 
@@ -48,7 +48,7 @@ class LinkedList {
         
     }
 
-    void addElement(int data) {
+    public void addElement(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -61,7 +61,7 @@ class LinkedList {
         }
     }
 
-    void display() {
+    public void display() {
         Node curr = head;
         while (curr != null) {
             System.out.print(curr.data + " ");
