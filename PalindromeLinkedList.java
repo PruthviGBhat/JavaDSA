@@ -9,7 +9,7 @@ class Node {
 class LinkedList {
     Node head;
 
-    void addElementAtLast(int data) {
+    public void addElementAtLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -22,7 +22,7 @@ class LinkedList {
         }
     }
 
-    boolean isPalindrome() {
+    public boolean isPalindrome() {
         Node slow = head;
         Node fast = head;
         Node curr = head;
