@@ -10,7 +10,7 @@ class Node {
 class LinkedList {
     Node head;
 
-    void reverse() {
+    public void reverse() {
         Node curr = head;
         Node prev = null;
 
@@ -23,7 +23,7 @@ class LinkedList {
         head = prev;
     }
 
-    void display() {
+    public void display() {
         Node curr = head;
 
         while (curr != null) {
@@ -32,7 +32,7 @@ class LinkedList {
         }
     }
 
-    void addElementAtLast(int data) {
+    public void addElementAtLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
