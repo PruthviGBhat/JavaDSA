@@ -13,7 +13,6 @@ class LinkedList {
     
     public void display() {
         Node curr = head;
-
         while (curr != null) {
             System.out.print(curr.data + " -> ");
             curr = curr.next;
