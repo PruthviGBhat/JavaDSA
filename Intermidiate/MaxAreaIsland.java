@@ -1,3 +1,4 @@
+package Intermidiate;
 class MaxAreaIsland {
     public static int maxAreaOfIsland(int[][] grid) {
         int maxsize = 0;

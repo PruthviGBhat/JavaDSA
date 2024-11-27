@@ -1,6 +1,7 @@
+package Intermidiate;
 import java.util.*;
 
-public class DFSGraph{
+public class PrintAllPathToTarget{
     static class edge{
         int src;
         int dest;
@@ -20,21 +21,27 @@ public class DFSGraph{
         graph[2].add(new edge(2,0));
         graph[2].add(new edge(2,3));
     }
-    public static void dfs(ArrayList<edge> graph[],int curr,boolean visited[]){
-        System.out.print(curr);
-        visited[curr]=true;
-        for(int i=0;i<graph[curr].size();i++){
-            edge e = graph[curr].get(i);
+    public static void printAllPath(ArrayList<edge> graph[],int source,int target,boolean visited[],String path){
+        if(source==target){
+            System.out.println(path+" ");
+            return;
+        }
+        for(int i=0;i<graph[source].size();i++){
+            edge e = graph[source].get(i);
             if(visited[e.dest]==false){
-                dfs(graph,e.dest,visited);
+                visited[source]=true;
+                printAllPath(graph,e.dest,target,visited,path+e.dest);
+                visited[source]=false;
             }
         }
     }
 	public static void main(String[] args) {
 		int v=4;
+		int source=0,target=3;
 		boolean visited[]=new boolean[v];
+		String path="0";
 		ArrayList<edge> graph[] = new ArrayList[v];
 		creategraph(graph);
-		dfs(graph,0,visited);
+        printAllPath(graph,source,target,visited,path);
 	}
 }
