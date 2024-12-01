@@ -64,6 +64,6 @@ public class FindElementInTree {
         int[] arr = { 10, 20, -1, 30, -1, 40, -1, -1 };
         Node root = t.construct(arr);
         t.displayRecursive(root);
-        System.out.println(t.findelement(40,root););
+        System.out.println(t.findelement(40,root));
     }
 }
